@@ -4,17 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("maximum INT no is");
-            int output = MaximumNumber.MaximumNum(11, 25, 33);
+            Console.WriteLine("Please Enter First Value");
+            float firstValue = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Please Enter Second Value");
+            float secondValue = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Please Enter Third Value");
+            float thirdValue = Convert.ToSingle(Console.ReadLine());
+
+            float output = MaximumNumber.MaximumFloatNum(firstValue, secondValue, thirdValue);
+            Console.WriteLine("Maximum Float No is");
             Console.WriteLine(output);
 
-            Console.WriteLine("Maximum Double no is");
-            double output1 = MaximumNumber.MaximumNum(11.5, 22.5, 33.5);
-            Console.WriteLine(output1);
-
-            Console.WriteLine("Maximum String no is");
-            string output2 = MaximumNumber.MaximumNum("abc", "xyz", "pqr");
-            Console.WriteLine(output1);
         }
 
     }
