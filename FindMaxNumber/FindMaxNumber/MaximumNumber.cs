@@ -8,24 +8,24 @@ namespace FindMaxNumber
 {
     public class MaximumNumber
     {
-        public static string MaximumStringNum(string firstValue, string secondValue, string thirdValue)
+        public static T GetMaximum<T>(T first_Value, T second_Value, T third_Value) where T : IComparable<T>
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-
+            if (first_Value.CompareTo(second_Value) > 0 && first_Value.CompareTo(third_Value) > 0)
             {
-                return firstValue;
+                return first_Value;
             }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            else if (second_Value.CompareTo(first_Value) > 0 && second_Value.CompareTo(third_Value) > 0)
             {
-                return secondValue;
+                return second_Value;
             }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+            else if (third_Value.CompareTo(first_Value) > 0 && third_Value.CompareTo(second_Value) > 0)
             {
-                return thirdValue;
+                return third_Value;
             }
-            return firstValue;
+            else
+            {
+                throw new Exception("Values are same");
+            }
         }
-
-
     }
 }
